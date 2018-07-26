@@ -1,1 +1,1 @@
-# react-search
+# react-search-bar
