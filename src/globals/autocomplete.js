@@ -1,6 +1,6 @@
 export default [
-  'Peaches Does Herself',
-  'His and Hers',
-  'Storied: Herschel',
-  'Caitlin Plays Herself'
+  'Breaking In',
+  'On Chesil Beach',
+  'Ghost Stories',
+  'Isle of Dogs'
 ]
