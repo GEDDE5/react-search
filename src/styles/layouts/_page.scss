@@ -47,4 +47,20 @@
   }
 }
 
+.fuzzy-toggle {
+  border: 1px solid #ccc;
+  right: 0;
+  top: 0;
+  padding: 8px 12px;
+  position: absolute;
+
+  .fuzzy-toggle__checkbox {
+    margin-right: 0.5rem;
+  }
+
+  .fuzzy-toggle__text {
+    font-size: 13px;
+  }
+}
+
 /* ====  End of PAGE  ===== */

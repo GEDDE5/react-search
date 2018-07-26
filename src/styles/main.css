@@ -106,6 +106,17 @@ a {
     margin: 3px 0;
     width: fit-content; }
 
+.fuzzy-toggle {
+  border: 1px solid #ccc;
+  right: 0;
+  top: 0;
+  padding: 8px 12px;
+  position: absolute; }
+  .fuzzy-toggle .fuzzy-toggle__checkbox {
+    margin-right: 0.5rem; }
+  .fuzzy-toggle .fuzzy-toggle__text {
+    font-size: 13px; }
+
 /* ====  End of PAGE  ===== */
 /* End of Layout */
 /*

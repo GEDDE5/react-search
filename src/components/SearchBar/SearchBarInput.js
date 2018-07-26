@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 import autocomplete from 'globals/autocomplete'
@@ -25,7 +25,8 @@ class SearchBarInput extends Component {
 
   handleKeyUp = event => {
     const { value } = event.target
-    const suggestions = getSuggestions(value, autocomplete)
+    const { fuzzySearch } = this.props
+    const suggestions = getSuggestions(value, autocomplete, fuzzySearch)
     this.setState({ suggestions })
   }
 
@@ -81,6 +82,7 @@ class SearchBarInput extends Component {
 }
 
 SearchBarInput.propTypes = {
+  fuzzySearch: PropTypes.bool.isRequired
 }
 
 export default SearchBarInput
