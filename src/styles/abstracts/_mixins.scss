@@ -1,0 +1,52 @@
+/* =============================
+=            MIXINS            =
+============================= */
+
+/**
+ * MEDIA QUERIES
+**/
+
+@mixin for-phone-only {
+  @media (max-width: 599px) { @content; }
+}
+
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) { @content; }
+}
+
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) { @content; }
+}
+
+@mixin for-desktop-up {
+  @media (min-width: 1200px) { @content; }
+}
+
+/*  End of MEDIA QUERIES  */
+
+
+/**
+ * FLEXBOX
+**/
+
+@mixin flex-align($center: 'both') {
+  @if $center == 'horizontal' {
+    display: flex;
+    justify-content: center;
+  }
+
+  @else if $center == 'vertical' {
+    display: flex;
+    align-items: center;
+  }
+
+  @else if $center == 'both' {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* End of FLEXBOX */
+
+/* ====  End of MIXINS  ===== */

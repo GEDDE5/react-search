@@ -1,0 +1,25 @@
+/* ================================
+=            FUNCTIONS            =
+================================ */
+
+/*
+ *  LIGHTEN COLOUR
+*/
+
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+
+/* End of LIGHTEN COLOUR */
+
+/*
+ *  DARKEN COLOUR
+*/
+
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
+
+/* End of DARKEN COLOUR */
+
+/* ====  End of FUNCTIONS  ===== */

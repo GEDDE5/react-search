@@ -1,0 +1,49 @@
+/* ===========================
+=            PAGE            =
+=========================== */
+
+.page {
+  height: 90vh;
+  margin: 0 auto;
+  width: 800px;
+}
+
+.header {
+  margin: 2rem;
+
+  .title {
+    font-size: 1.5rem;
+  }
+}
+
+.data {
+  @include flex-align('horizontal');
+
+  font-size: 80%;
+
+  .data__set {
+    display: inline-block;
+    margin: 1rem 2rem;
+  }
+
+  .data__title {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+  }
+
+  .data__list {
+    margin-left: 10px;
+    padding-left: 10px;
+  }
+
+  .data__item {
+    background: hsl(240, 14%, 97%);
+    color: #f15858;
+    font-family: 'Lucida Console', monospace;
+    list-style: none;
+    padding: 5px 10px;
+    margin: 3px 0;
+  }
+}
+
+/* ====  End of PAGE  ===== */
