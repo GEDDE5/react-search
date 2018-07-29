@@ -1,7 +1,7 @@
 import FuzzySet from 'fuzzyset.js'
 
 const getSuggestions = (val, allSugestions, fuzzySearch) => {
-  // Escapes user input
+  // Escape user input
   const escapedVal = val.trim().replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
 
   // Return empty array if escaped val is empty
@@ -19,13 +19,13 @@ const getSuggestions = (val, allSugestions, fuzzySearch) => {
 
   // Fuzzy mode
   const all = FuzzySet(allSugestions, false)
-
   const minMatchScore = 0.2
   const suggestions = all.get(escapedVal, null, minMatchScore)
 
   if (suggestions === null) {
     return []
   }
+
   return suggestions.map(suggestion => suggestion[1])
 }
 

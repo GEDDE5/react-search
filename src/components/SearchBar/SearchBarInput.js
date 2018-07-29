@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
+import api from 'utils/api'
+
 import autocomplete from 'globals/autocomplete'
 import history from 'globals/history'
 
@@ -23,11 +25,20 @@ class SearchBarInput extends Component {
 
   handleChange = event => this.setState({ value: event.target.value })
 
-  handleKeyUp = event => {
+  handleKeyUp = async event => {
     const { value } = event.target
-    const { fuzzySearch } = this.props
-    const suggestions = getSuggestions(value, autocomplete, fuzzySearch)
-    this.setState({ suggestions })
+    switch (event.key) {
+      case 'Enter': {
+        const movieData = await api.getMoviesBySearch(value)
+        console.log(movieData.Search);
+        break
+      }
+      default: {
+        const { fuzzySearch } = this.props
+        const suggestions = getSuggestions(value, autocomplete, fuzzySearch)
+        this.setState({ suggestions })
+      }
+    }
   }
 
   render() {
