@@ -1,6 +1,6 @@
 export default [
-  'Breaking In',
-  'On Chesil Beach',
-  'Ghost Stories',
-  'Isle of Dogs'
+  'Drake',
+  'Dr. Dre',
+  'Dr. Dog',
+  'DRAM'
 ]
